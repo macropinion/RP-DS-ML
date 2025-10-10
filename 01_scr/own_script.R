@@ -16,10 +16,15 @@ dataInwardFlow <- setDT(dataInwardFlow)
 dataGDP <- setDT(dataGDP)
 
 head(dataGDP, 5)
+summary(dataGDP)
 
 rm(list = ls())
 
 ls()              # Listet alle Objekte im Environment
 objects()         # Gleiches wie ls()
 str(data)         # Zeigt Struktur einzelner Objekte
+
+
+utils::View(dataGDP)
+exists("dataGDP"); class(dataGDP); dim(dataGDP)
 
