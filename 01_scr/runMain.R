@@ -16,10 +16,10 @@ rm(list = ls())
 # Config
 #-----------------------------------------------------------------------------------
 Config <- list()
-Config$Path$mainPath <- "~/01 Projects/08 wu-wien/01 datasmlearning/01 IntroR/"
+Config$Path$mainPath <- "~/RP-DS-ML"
 
 # set config parameter 
-source(paste(Config$Path$mainPath,'/01 scr/setConfig.R',sep = ""))
+source(paste(Config$Path$mainPath,'/01_scr/setConfig.R',sep = ""))
 Config <- setConfig(Config)
 
 # load Data

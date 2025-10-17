@@ -16,9 +16,9 @@ setConfig <- function(Config){
   
   #Project paths
   mainPath <- Config$Path$mainPath
-  Config$Path$scrPath <- scrPath <- paste0(mainPath, "/01 scr/")
-  Config$Path$dataPath   <- paste0(mainPath, "/02 data/")
-  Config$Path$outPath    <- paste0(mainPath, "/03 outputs/")
+  Config$Path$scrPath <- scrPath <- paste0(mainPath, "/01_scr/")
+  Config$Path$dataPath   <- paste0(mainPath, "/02_data/")
+  Config$Path$outPath    <- paste0(mainPath, "/03_outputs/")
   
   #Input Parameters
   Config$Input$inputFile <- paste0(Config$Path$dataPath,"Unctad.xlsx")
