@@ -11,6 +11,8 @@
 # Output:
 # - data.table with the selected inputs
 
+source('~/RP-DS-ML/01_scr/getUnctadAPI.R')
+
 # ------------------------------------------------------------------------------
 getUnctadFdiData <- function(years = 2000:2024,economies = NULL,clientId,clientSecret,direction=1,flowStock='08') {
   
@@ -53,11 +55,6 @@ getUnctadFdiData <- function(years = 2000:2024,economies = NULL,clientId,clientS
 }
 
 
-clientId <- "b82ac0fc-a980-4638-8c41-d2514f1b2e3e"
-clientSecret <- "4MubvhEBFMnCtHGME/WLcRHKPJmA0XtEbHvmhReVBPQ="
-
-
 data_test <- getUnctadFdiData(years = 2000:2024,economies = NULL,clientId,clientSecret,direction=1,flowStock='08')
-View(dataFDI)
 
 View(data_test)
