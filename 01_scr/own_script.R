@@ -28,3 +28,7 @@ str(data)         # Zeigt Struktur einzelner Objekte
 utils::View(dataGDP)
 exists("dataGDP"); class(dataGDP); dim(dataGDP)
 
+getOption("vscodeR")   # sollte NICHT NULL sein
+View(dataGDP)          # sollte den Data Viewer öffnen
+
+
