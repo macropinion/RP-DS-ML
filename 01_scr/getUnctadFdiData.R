@@ -4,8 +4,8 @@
 # Iput:
 # - years e.g: 2000:2024
 # - economies: c('Austria','Germany','Asia'), NULL: All Countries
-# - clientId: from UNCAD website
-# - clientSecret: from UNCAD website
+# - clientId: b82ac0fc-a980-4638-8c41-d2514f1b2e3e
+# - clientSecret: from UNCAD website (API Key 4MubvhEBFMnCtHGME/WLcRHKPJmA0XtEbHvmhReVBPQ=)
 # - direction: 1:inward, 1:outward
 # - flowStock: "08": Flow, "09": Stock
 # Output:
@@ -51,3 +51,11 @@ getUnctadFdiData <- function(years = 2000:2024,economies = NULL,clientId,clientS
   data <- utils::read.csv(gzfile(tmpFile),header=TRUE,na.strings = "",encoding   = "UTF-8",colClasses = c("character","integer","double","character","character"))
   
 }
+
+
+clientId <- "b82ac0fc-a980-4638-8c41-d2514f1b2e3e"
+clientSecret <- "4MubvhEBFMnCtHGME/WLcRHKPJmA0XtEbHvmhReVBPQ="
+
+
+dataFDI <- getUnctadFdiData(years = 2000:2024,economies = NULL,clientId = "b82ac0fc-a980-4638-8c41-d2514f1b2e3e" ,clientSecret = "4MubvhEBFMnCtHGME/WLcRHKPJmA0XtEbHvmhReVBPQ=",direction=1,flowStock='08')
+View(dataFDI)
